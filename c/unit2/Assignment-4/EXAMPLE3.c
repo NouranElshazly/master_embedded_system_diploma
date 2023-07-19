@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : EX2.c
+ Name        : EXAMPLE3.c
  Author      : Nouran
  Version     :
  Copyright   : Your copyright notice
@@ -12,16 +12,23 @@
 #include <stdlib.h>
 
 int main(void) {
-	char c[1000];
-		int lenghth =0;
-		int i;
-		printf("Enter a string");
+	void reverse (); //prototype
+	printf ("Enter a sentense ");
+	fflush (stdout);
+	fflush(stdin);
+	reverse();
+
+}
+/* function difination */
+void reverse (){
+	char c ;
+
+	scanf ("%c",&c);
+	if (c !='\n') /*stop recursion if getting null */
+	{
+		reverse(); // calling function again
+		printf("%c",c);
+		fflush (stdout);
 		fflush(stdin);
-		fflush(stdout);
-		gets(c);
-		for (i=0; c[i]!='\0';i++)
-		{
-			lenghth ++;
-		}
-		printf("Lenghth of string =%d",lenghth );
+	}
 }
